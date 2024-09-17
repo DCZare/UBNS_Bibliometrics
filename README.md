@@ -14,6 +14,7 @@ Development currently underway
 - [ ] Semantic Scholar
 - [ ] Altmetrics
 - [ ] Scite
+- [ ] ORCID oAuth
 
 ---
 
