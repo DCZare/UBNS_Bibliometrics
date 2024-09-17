@@ -4,4 +4,16 @@
 ## Developed by David Zaretsky
 ## In partnership with UBNS and the Gates Vascular Institute
 
+---
+
 Development currently underway
+
+---
+
+- [x] CSV Duplicate Sifter
+- [ ] Semantic Scholar
+- [ ] Altmetrics
+- [ ] Scite
+
+---
+
