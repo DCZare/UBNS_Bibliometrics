@@ -12,7 +12,7 @@ Development currently underway
 
 - [x] CSV Duplicate Sifter
 - [ ] Semantic Scholar
-- [ ] Altmetrics
+- [x] Altmetrics
 - [ ] Scite
 - [ ] ORCID oAuth
 
