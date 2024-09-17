@@ -41,7 +41,7 @@ for citation in citations:
 
 fieldnames = sorted(fieldnames)
 
-csv_file_path = 'concat/outputs/citations.csv'
+csv_file_path = 'Build/concat/outputs/citations.csv'
 
 with open(csv_file_path, 'w', newline='') as csvfile:
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
