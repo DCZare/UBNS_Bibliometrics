@@ -3,24 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ORCID Auth Widget with Flask</title>
-    <link rel="stylesheet" href="https://orcid.org/static/orcid_auth_widget/orcid-auth-widget.css">
+    <title>Index Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #007bff;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-    <h1>ORCID Authentication Example</h1>
-    
-    <div id="orcid-auth-widget-container">
-        <button id="orcid-auth-button">Authenticate with ORCID</button>
+    <div class="container">
+        <h1>Welcome to My Site!</h1>
+        <p>Click below to authenticate with ORCID or visit the welcome page directly.</p>
+        <!-- Button for ORCID Authentication -->
+        <button onclick="window.location.href='https://your-orcid-auth-url.com'">Authenticate with ORCID</button>
+        <!-- Button to Welcome Page -->
+        <button onclick="window.location.href='welcome.html'">Go to Welcome Page</button>
     </div>
-
-    <script src="https://orcid.org/static/orcid_auth_widget/orcid-auth-widget.js"></script>
-    <script>
-        ORCIDAuthWidget.init({
-            client_id: '0009-0005-3935-9381',  
-            redirect_uri: 'http://localhost:5000/welcome',  
-            scope: 'openid',  
-            authButtonId: 'orcid-auth-button'
-        });
-    </script>
 </body>
 </html>
