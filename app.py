@@ -19,6 +19,7 @@ def redirect_to_welcome():
     return redirect('https://dczare.github.io/UBNS_Bibliometrics/welcome.html')
 
 @app.route('/home')
+def redirect_to_home():
     return redirect('https://dczare.github.io/UBNS_Bibliometrics/home.html')
 
 if __name__ == '__main__':
