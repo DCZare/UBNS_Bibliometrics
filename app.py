@@ -12,7 +12,7 @@ def redirect_to_welcome():
 
 @app.route('/home')
 def home():
-    return render_template('home.html')  # Serve home.html
+    return render_template('https://dczare.github.io/UBNS_Bibliometrics/home.html')  # Serve home.html
 
 if __name__ == '__main__':
     app.run(debug=True)
