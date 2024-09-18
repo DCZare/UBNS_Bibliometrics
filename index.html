@@ -52,14 +52,14 @@
         <button onclick="handleAuthClick()">Authenticate with ORCID</button>
         <button onclick="window.location.href='{{ url_for('welcome') }}'">Go to Welcome Page</button>
         <!-- ORCID widget container -->
-        <div id="orcidWidget" data-clientid="YOUR_ORCID_CLIENT_ID" data-redirecturi="https://dczare.github.io/UBNS_Bibliometrics/welcome.html"></div>
+        <div id="orcidWidget" data-clientid="0009-0005-3935-9381" data-redirecturi="https://dczare.github.io/UBNS_Bibliometrics/welcome.html"></div>
     </div>
 
     <script>
         function handleAuthClick() {
             // Assuming ORCIDAuthWidget is available globally after script inclusion
             ORCIDAuthWidget.init({
-                clientId: 'YOUR_ORCID_CLIENT_ID', // Replace with your ORCID client ID
+                clientId: '0009-0005-3935-9381', // Replace with your ORCID client ID
                 redirectUri: 'https://dczare.github.io/UBNS_Bibliometrics/welcome.html',
                 scope: '/authenticate',
                 responseType: 'code',
