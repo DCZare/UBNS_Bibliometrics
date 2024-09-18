@@ -1,10 +1,18 @@
 import pyaltmetric
+import os
 from pyaltmetric import Altmetric
 import csv
 
+cwd = os.getcwd()
+
+print(cwd)
+
+i = 1
+
+input_csv_file_path = os.path.join(cwd, 'Build/data/doi_split_single_work_output.csv')
+
 #dois = ('10.1016/j.wneu.2018.08.242', '10.1111/epi.13298')
 dois = []
-input_csv_file_path = 'Build/data/doi_split_single_work_output.csv'
 original_rows = []
 
 with open(input_csv_file_path, 'r') as infile:
@@ -12,7 +20,7 @@ with open(input_csv_file_path, 'r') as infile:
     fieldnames = reader.fieldnames
     if 'work_doi' not in fieldnames:
         raise ValueError("The 'doi' column is missing from file_a.csv")
-        print(f'Error with {row}')
+        print('Error')
         
     
     for row in reader:
@@ -29,9 +37,11 @@ for doi in dois:
     citation = a.doi(doi)
     if citation is not None:
         citations.append(citation)
-        print(f'Found: {doi}')
+        print(f'{i} Found: {doi}')
+        i = i+1
     else:
-        print(f"No citation data found for DOI: {doi}")
+        print(f"{i}: No citation data found for DOI: {doi}")
+        i = i+1
 
 
 fieldnames = set()

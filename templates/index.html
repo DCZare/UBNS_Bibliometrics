@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORCID Auth Widget with Flask</title>
+    <link rel="stylesheet" href="https://orcid.org/static/orcid_auth_widget/orcid-auth-widget.css">
+</head>
+<body>
+    <h1>ORCID Authentication Example</h1>
+    
+    <!-- ORCID Authentication Button -->
+    <div id="orcid-auth-widget-container">
+        <button id="orcid-auth-button">Authenticate with ORCID</button>
+    </div>
+
+    <!-- ORCID Authentication Widget Script -->
+    <script src="https://orcid.org/static/orcid_auth_widget/orcid-auth-widget.js"></script>
+    <script>
+        // Initialize the ORCID Auth Widget
+        ORCIDAuthWidget.init({
+            client_id: '0009-0005-3935-9381',  // Replace with your ORCID client ID
+            redirect_uri: 'http://localhost:5000/welcome',  // The redirect URL after authentication
+            scope: 'openid',  // Adjust the scope as needed
+            authButtonId: 'orcid-auth-button'
+        });
+    </script>
+</body>
+</html>
