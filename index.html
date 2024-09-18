@@ -42,42 +42,29 @@
             max-width: 300px;
         }
     </style>
-    <!-- ORCID Auth Widget Script -->
     <script src="https://orcid.org/assets/orcid-auth-widget.js"></script>
 </head>
 <body>
     <div class="container">
         <h1>Welcome to My Site!</h1>
         <p>Click below to authenticate with ORCID or visit the welcome page directly.</p>
-        <!-- Button for ORCID Authentication -->
         <button onclick="handleAuthClick()">Authenticate with ORCID</button>
-        <!-- Button to Welcome Page -->
         <button onclick="window.location.href='welcome.html'">Go to Welcome Page</button>
-        
-        <!-- ORCID Auth Widget -->
         <div id="orcid-widget"></div>
     </div>
 
     <script>
         function handleAuthClick() {
             ORCIDAuthWidget.init({
-                clientId: 'YOUR_CLIENT_ID',  // Replace with your ORCID client ID
-                redirectUri: 'https://dczare.github.io/UBNS_Bibliometrics/welcome.html', // Redirect to welcome.html after authentication
-                scope: '/authenticate', // ORCID scope (e.g., /authenticate)
-                responseType: 'code',  // Use 'code' for authorization code flow
-                state: 'state_parameter', // Optional: Use state parameter to maintain state between requests
+                clientId: 'YOUR_CLIENT_ID',
+                redirectUri: 'https://dczare.github.io/UBNS_Bibliometrics/welcome.html',
+                scope: '/authenticate',
+                responseType: 'code',
+                state: 'state_parameter',
             });
         }
 
-        // Initialize ORCID Auth Widget once when the page loads
         document.addEventListener('DOMContentLoaded', function() {
-            ORCIDAuthWidget.init({
-                clientId: 'YOUR_CLIENT_ID', // Replace with your ORCID client ID
-                redirectUri: 'https://dczare.github.io/UBNS_Bibliometrics/welcome.html', // Redirect to welcome.html after authentication
-                scope: '/authenticate', // ORCID scope (e.g., /authenticate)
-                responseType: 'code',  // Use 'code' for authorization code flow
-                state: 'state_parameter', // Optional: Use state parameter to maintain state between requests
-            });
         });
     </script>
 </body>
