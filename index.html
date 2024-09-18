@@ -3,26 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index Page</title>
+    <title>Test Page</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            color: #333;
             text-align: center;
-            margin: 0;
-            padding: 20px;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            color: #007bff;
+            margin: 20px;
         }
         button {
             padding: 10px 20px;
@@ -32,44 +18,13 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            margin: 10px;
         }
         button:hover {
             background-color: #0056b3;
         }
-        #orcid-widget {
-            margin: 20px auto;
-            max-width: 300px;
-        }
     </style>
-    <!-- Include the ORCID widget script from GitHub Pages -->
-    <script src="https://dczare.github.io/UBNS_Bibliometrics/orcid-widget.js"></script>
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to My Site!</h1>
-        <p>Click below to authenticate with ORCID or visit the welcome page directly.</p>
-        <button onclick="handleAuthClick()">Authenticate with ORCID</button>
-        <button onclick="window.location.href='https://dczare.github.io/UBNS_Bibliometrics/welcome.html'">Go to Welcome Page</button>
-        <!-- ORCID widget container -->
-        <div id="orcidWidget" data-clientid="YOUR_ORCID_CLIENT_ID" data-redirecturi="https://dczare.github.io/UBNS_Bibliometrics/welcome.html"></div>
-    </div>
-
-    <script>
-        function handleAuthClick() {
-            // Initialize ORCIDAuthWidget when the button is clicked
-            ORCIDAuthWidget.init({
-                clientId: 'YOUR_ORCID_CLIENT_ID', // Replace with your ORCID client ID
-                redirectUri: 'https://dczare.github.io/UBNS_Bibliometrics/welcome.html',
-                scope: '/authenticate',
-                responseType: 'code',
-                state: 'state_parameter',
-            });
-        }
-
-        document.addEventListener('DOMContentLoaded', function() {
-            // Any additional DOM-related tasks if needed
-        });
-    </script>
+    <button onclick="window.location.href='https://dczare.github.io/UBNS_Bibliometrics/welcome.html'">Go to Welcome Page</button>
 </body>
 </html>
