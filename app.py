@@ -18,5 +18,18 @@ def index():
 def redirect_to_welcome():
     return redirect('https://dczare.github.io/UBNS_Bibliometrics/welcome.html')
 
+@app.route('/home')
+def home():
+  # This is the new view function for the "/home" route
+  # You can add any content or logic you want to display on the home page here
+  return '''
+      <html>
+          <head><title>Home Page</title></head>
+          <body>
+              <h1>Welcome to the Home Page</h1>
+          </body>
+      </html>
+  '''
+
 if __name__ == '__main__':
     app.run(debug=True)
