@@ -22,9 +22,18 @@
         button:hover {
             background-color: #0056b3;
         }
+        .search-form {
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
     <button onclick="window.location.href='https://dczare.github.io/UBNS_Bibliometrics/welcome.html'">Go to Welcome Page</button>
+    <div class="search-form">
+        <form action="/search" method="get">
+            <input type="text" name="query" placeholder="Search..." required>
+            <button type="submit">Search</button>
+        </form>
+    </div>
 </body>
 </html>
